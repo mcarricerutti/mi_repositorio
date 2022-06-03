@@ -1,4 +1,3 @@
-
 *{
     margin: 0;
     padding: 0;
@@ -176,21 +175,23 @@
     width: 90%;
     height: 700px;
     margin-top: 2%;
-    margin-left: 10%;
 }
 .masas-image {
     width: 300px;
+    /*
     height: 300px;
     float: left;
-    margin:20px 30px;
+    margin:20px 30px;*/
     border-radius: 10px;
     border: 5px solid rgb(209, 128, 128);
 }
 .nombres {
     font-size: 20px;
-    color: #836b6b;
+    color: #0b0b0b;
+    font-weight: bold;
     background: white;
     height: auto;
+    letter-spacing: 3px;
 }
 .masas .masas-image img {
     width: 90%;
@@ -369,6 +370,7 @@ p {
         "footer footer footer";
 }
 /*INICIO*/
+
 .contenedor-bus{
     display: flex;
     flex-direction: row;
@@ -434,6 +436,12 @@ p {
     color: rgba(235, 48, 48, 0.712);
     text-decoration: none;
 }
+.contenedor-nav2 ul li a span{
+    background-color: hotpink;
+    color: white;
+    border-radius: 10px;
+    padding: 3px;
+}
 
 .contenedor-nav2 ul  ul {
     position: absolute;
@@ -478,6 +486,44 @@ p {
     padding: 3%;
 }
 /*PRODUCTOS*/
+.masas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+
+ .masas-image {
+    width: 400px;
+    height: 400px;
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 5px solid rgb(209, 128, 128);
+    overflow: hidden;
+}
+.nombres span {
+    font-size: 20px;
+    color: #000000;
+    background: white;
+    height: auto;
+    display: block;
+    margin-bottom: 60px ;
+}
+.nombres{
+    margin-top: 25px;
+    font-size:15px ;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+
+}
+.nombres:hover{
+    transform: translateY(-84%);
+    background: rgba(251, 248, 248,.7);
+
+}
 
 /*CONTACTO*/
 .title-form {
@@ -527,6 +573,8 @@ div input #btm {
 }
 /*FOOTER*/
 .footer{
+    height: 180px;
+    margin-bottom: 50px;
     display: grid;
     grid-auto-columns: repeat(2,1fr);
     grid-template-rows:repeat(3,1fr);
@@ -590,6 +638,12 @@ div input #btm {
 .contenedor-logo img {
     width: 200px;
 }
+.contenedor-nav ul li a span{
+    background-color: hotpink;
+    color: white;
+    border-radius: 10px;
+    padding: 3px;
+}
 /*QUIÉN SOY*/
 #texto {
     border: 2px solid rgb(215, 146, 146);
@@ -601,8 +655,46 @@ div input #btm {
     margin-left: 10%;
     padding: 3%;
 }
-/*PRODUCTOS*/
 
+ /*PRODUCTOS CON :HOVER*/
+ .masas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+
+ .masas-image {
+    width: 400px;
+    height: 400px;
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 5px solid rgb(209, 128, 128);
+    overflow: hidden;
+}
+.nombres span {
+    font-size: 20px;
+    color: #000000;
+    background: white;
+    height: auto;
+    display: block;
+    margin-bottom: 60px ;
+}
+.nombres{
+    margin-top: 25px;
+    font-size:15px ;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+
+}
+.nombres:hover{
+    transform: translateY(-84%);
+    background: rgba(251, 248, 248,.7);
+
+}
 /*CONTACTO*/
 .title-form {
     display:inline-block;
@@ -660,7 +752,7 @@ div input #btm {
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    height: 250px;
+    height: 130px;
     background-color:  #faebd7;
 }
 /*logosCard-------*/
