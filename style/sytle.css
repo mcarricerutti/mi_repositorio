@@ -145,22 +145,20 @@
 /*--texto presentacion--*/
 #texto {
     margin-top: 3%;
-    background-color:#f3d9d9;
+    background: linear-gradient(transparent , rgb(214, 116, 116) ,transparent );
 }
 #titulo {
     text-align: center;
     font-size: 35px;
-    color: #DA9191;
-    text-decoration: underline;
-    
+    color: #fcfcfc;
+    text-decoration: underline currentColor ;
     grid-area: titulo;
 }
 #parrafo {
     text-align: center;
-    color:gray;
+    color:rgb(236, 230, 230);
     margin-top: 1%;
     font-size: 23px;
-
     grid-area: parrafo;
 }
 /*=================AQUI PRODUCTOS=====================*/
@@ -476,7 +474,7 @@ p {
 }
 /*QUIÉN SOY*/
 #texto {
-    border: 2px solid rgb(215, 146, 146);
+    border: 3px solid rgb(215, 146, 146);
     display: grid ;
     grid-template-columns: auto;
     grid-template-rows: 2fr 4fr;
@@ -646,7 +644,7 @@ div input #btm {
 }
 /*QUIÉN SOY*/
 #texto {
-    border: 2px solid rgb(215, 146, 146);
+    border: 5px solid rgb(215, 146, 146);
     display: grid ;
     grid-template-columns: auto;
     grid-template-rows: 2fr 4fr;
