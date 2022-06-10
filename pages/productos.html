@@ -8,129 +8,184 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="/mi_repositorio/style/sytle.css">
-    <link rel="icon" href="/mi_repositorio/img/img.jpeg.jpg">
+    <link rel="stylesheet" href="../style/sytle.css">
+    <!--ACA MODIFIQUE - LLEVA ../ PORQUE ESTA FUERA DE TU CARPETA PAGES -->
+    <link rel="icon" href="../img/img.jpeg.jpg">
+    <!--ACA MODIFIQUE - LLEVA ../ PORQUE ESTA FUERA DE TU CARPETA PAGES -->
+
+    <!--BOOTSTRAP CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!--ANIMACIÓN-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>Martush-Cake Shop</title>
 </head>
 
-<body class="body">  <header class="contenedor">
-    <div class="contenedor-bus">
 
-        <h1>
-         <a href="/mi_repositorio/index.html">Inicio</a>
-        </h1>
+<body class="body">
 
-        <div class="contenedor-buscar">
-            <input class="buscar-texto" type="text" placeholder="Buscar...">
-            <a href="#" class="butoon"><i class="fa fa-search" aria-hidden="true"></i>
-            </a>
+    <header class="contenedor">
+
+        <nav class="navbar navbar-expand-lg bg-white mt-3" data-aos="fade-down" data-aos-duration="3000">
+            <div class="container-fluid">
+                <div class="nav-item active">
+                    <a class="navbar-brand" style="color: #DA9191;" href="../index.html">Inicio></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #DA9191;" href="quienSoy.html">Quién soy?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #DA9191;" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #DA9191;  border:solid 1px #DA9191;"
+                                href="productos.html"><strong>Productos</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #DA9191;" href="puntoDeVenta.html">Punto de venta</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" style="border:solid 1px #ecafaf;" type="search"
+                            aria-label="Search">
+                        <button class="btn btn-outline" style="background: #ecafaf; color:#fdfdfd;"
+                            type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="contenedor-logo" data-aos="fade-right" data-aos-duration="3000">
+            <div class="text-center">
+                <img src="../img/img.jpeg.jpg" alt="Logo">
+            </div>
+            <h2>-MARTUSH-</h2>
+            <h2>Cake Shop</h2>
         </div>
-    </div>
-    
-    <nav class="contenedor-nav">
-        <ul>
-            <li><a href="/mi_repositorio/pages/quienSoy.html">Quién soy?</a></li>
-
-            <li><a href="/mi_repositorio/pages/productos.html"><span>Productos</span></a>
-                <ul>
-                    <li><a href="#">Tortas </a></li>
-                    <li><a href="#">Tartas </a></li>
-                    <li><a href="#">Number Cake </a></li>
-                    <li><a href="#">Cukcakes </a></li>
-                    <li><a href="#">Macarons </a></li>
-                </ul>
-            </li>
-
-            <li><a href="/mi_repositorio/pages/contacto.html">Contacto</a></li>
-
-            <li><a href="/mi_repositorio/pages/puntoDeVenta.html">Punto de venta</a></li>
 
 
-        </ul>
-    </nav>
-    
-    <div class="contenedor-logo">
-        <img src="/mi_repositorio/img/img.jpeg.jpg" alt="Logo">
+        <section>
 
-        <h2>-MARTUSH-</h2>
-        <h2>Cake Shop</h2>
-    </div>
+            <h2 id="title">Elegí aquí tu delicia favorita...</h2>
+            <div class="container"
+                style="border: solid 5px #ecafaf; margin-top:4%;margin-bottom: 5%; color: rgb(172, 165, 165);">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-xl-4">
+                        <div class="card mt-3 mb-3">
+                            <div class="row g-0">
+                                <img src="../img/tarta.jpg" style="width:60%; height: 50%; margin:auto;margin-top: 2%;"
+                                    class="img-fluid rounded-start" alt="...">
+                                <div class="card-body">
+                                    <h4 class="card-title" style="text-decoration:underline;"><strong>Tarta</strong>
+                                    </h4>
+                                    <p class="card-text">Especialiades de "Martush":
+                                        Tartas: Frutales,de Coco, Pasta Frola, Cabsha,Lemon Pie otras. </p>
+                                </div>
 
-    <!--MENU-GRID PARA PANTALLAS CHICAS-->
-    <nav class="contenedor-nav2">
-        <ul>
-            <li><a href="/mi_repositorio/pages/quienSoy.html">Quién soy?</a></li>
+                            </div>
+                        </div>
+                    </div>
 
-            <li><a href="/mi_repositorio/pages/productos.html"><span>Productos</span></a>
-                <ul>
-                    <li><a href="#">Tortas </a></li>
-                    <li><a href="#">Tartas </a></li>
-                    <li><a href="#">Number Cake </a></li>
-                    <li><a href="#">Cukcakes </a></li>
-                    <li><a href="#">Macarons </a></li>
-                </ul>
-            </li>
+                    <div class="col-sm-12 col-md-4 col-xl-4">
+                        <div class="card mt-3 mb-3">
+                            <div class="row g-0">
+                                <img src="../img/torta.jpg" style="width:60%; height: 50%; margin:auto;margin-top: 2%;"
+                                    class="img-fluid rounded-start" alt="...">
+                                <div class="card-body">
+                                    <h4 class="card-title" style="text-decoration:underline;"><strong>Torta</strong>
+                                    </h4>
+                                    <p class="card-text">Especialidades de "Martush":
+                                        Pavlova, Rogel, Oreo, Marquise, De cumpleaños, Cheesecake, otras.</p>
+                                </div>
 
-            <li><a href="/mi_repositorio/pages/contacto.html">Contacto</a></li>
+                            </div>
+                        </div>
+                    </div>
 
-            <li><a href="/mi_repositorio/pages/puntoDeVenta.html">Punto de venta</a></li>
+                    <div class="col-sm-12 col-md-4 col-xl-4">
+                        <div class="card mt-3 mb-3">
+                            <div class="row g-0">
+                                <img src="../img/bomb.jpg" style="width:60%; height: 50%; margin:auto;margin-top: 2%;"
+                                    class="img-fluid rounded-start" alt="...">
+                                <div class="card-body">
+                                    <h4 class="card-title" style="text-decoration:underline;"><strong>Bombones</strong>
+                                    </h4>
+                                    <p class="card-text">Especialidades de "Martush":
+                                        Marroc, Blanco/Negro (con nutella, licor, maní, ddl, otros), Rama, otros.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-xl-4">
+                        <div class="card mt-3 mb-3">
+                            <div class="row g-0">
+                                <img src="../img/cake.jpeg" style="width:60%; height: 50%; margin:auto;margin-top: 2%;"
+                                    class="img-fluid rounded-start" alt="...">
+                                <div class="card-body">
+                                    <h4 class="card-title" style="text-decoration:underline;"><strong>Cupcakes</strong>
+                                    </h4>
+                                    <p class="card-text"> Especialidades de "Martush":
+                                        Vainilla/Chocolate/Marmolado, Cremas variadas a elección.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-xl-4">
+                        <div class="card mt-3 mb-3">
+                            <div class="row g-0">
+                                <img src="../img/numb.jpg" style="width:60%; height: 50%; margin:auto;margin-top: 2%;"
+                                    class="img-fluid rounded-start" alt="...">
+                                <div class="card-body">
+                                    <h4 class="card-title" style="text-decoration:underline;"><strong>Number
+                                            Cake</strong></h4>
+                                    <p class="card-text"> Especialidades de "Martush":
+                                        Masa sablee/galleta/bizcochuelo, rellenos a elección (ddl, crema chantilly,
+                                        otras).
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-xl-4">
+                        <div class="card mt-3 mb-3">
+                            <div class="row g-0">
+                                <img src="../img/mac.jpg.jpeg"
+                                    style="width:60%; height: 50%; margin:auto;margin-top: 2%;"
+                                    class="img-fluid rounded-start" alt="...">
+                                <div class="card-body">
+                                    <h4 class="card-title" style="text-decoration:underline;"><strong>Macarons</strong>
+                                    </h4>
+                                    <p class="card-text"> Especialidades de "Martush":
+                                        Con color, Sin color, Con decos, Sin decos, Sabores a elección.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+    </header>
 
 
-        </ul>
-    </nav>
-
-    <h2 id="title">Elegí aquí tu delicia favorita...</h2>
-    <div class="masas">
-
-
-        <div class="masas-image">
-        <img src="/mi_repositorio/img/tarta.jpg" alt="tartas">
-        <p class="nombres">
-            <span>TARTAS</span>
-            Especialiades de "Martush":
-            Lemon Pie, Frutales, Coco, Pasta Frola, Cabsha, otras.
-        </p>
-        </div>
-        <div class="masas-image">
-        <img src="/mi_repositorio/img/torta.jpg" alt="tortas">
-        <p class="nombres"><span>TORTAS</span>
-            Especialidades de "Martush":
-            Pavlova, Rogel, Oreo, Marquise, De cumpleaños, Cheesecake, otras.
-        </p>
-        </div>
-        <div class="masas-image">
-        <img src="/mi_repositorio/img/bomb.jpg" alt="bombones">
-        <p class="nombres"><span>BOMBONES</span>
-            Especialidades de "Martush":
-            Marroc, Blanco/Negro (con nutella, licor, maní, ddl, otros), Rama, otros.
-        </p>
-        </div>
-        <div class="masas-image">
-        <img src="/mi_repositorio/img/numb.jpg" alt="number cake">
-        <p class="nombres"><span>NUMBER CAKE</span>
-            Especialidades de "Martush":
-            Masa sablee/galleta/bizcochuelo, rellenos variados a elección (ddl, crema chocolate, crema chantilly, otras).
-        </p>
-        </div>
-        <div class="masas-image">
-        <img src="/mi_repositorio/img/cake.jpeg" alt="cupcakes">
-        <p class="nombres"><span>CUPCAKES</span>
-            Especialidades de "Martush":
-            Vainilla/Chocolate/Marmolado, Cremas variadas a elección.
-        </p>
-        </div>
-        <div class="masas-image">
-        <img src="/mi_repositorio/img/mac.jpg.jpeg" alt="macarons">
-        <p class="nombres"><span>MACARON</span>
-            Especialidades de "Martush":
-            Variedades en colores y sabores.
-        </p>
-        </div>
-    </div>
-            
-</header>
     <!--Pie de pagina-->
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up" data-aos-duration="3000">
         <div class="footer-number">
             <p>Urgencias: 3574-414494</p>
         </div>
@@ -141,7 +196,7 @@
                 <li><a href="#"> <i class="fa fa-cc-mastercard" aria-hidden="true"></i></a></li>
                 <li><a href="#"> <i class="fa fa-money" aria-hidden="true"></i></a></li>
             </ul>
-        </div> 
+        </div>
         <div class="footer-redes">
             <h3>¡CONTACTANOS!</h3>
             <ul>
@@ -150,6 +205,18 @@
             </ul>
         </div>
     </footer>
+
+    <!-- BOOTSTRAP JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+
+    <!--ANIMACIÓN-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 
 </html>
