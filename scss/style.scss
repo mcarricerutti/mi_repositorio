@@ -1,0 +1,525 @@
+@import "scss/pages";
+@import "scss/index";
+@import "scss/quienSoy";
+@import "scss/contacto";
+@import "scss/productos";
+@import "scss/puntoDeVenta";
+@import "scss/mixins";
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+.body{
+    background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(../img/fondonuevo.jpg);
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:$tipoDeLetra;
+    
+    display: grid;
+
+}
+/*--INDEX--*/
+.section{
+    grid-area: section;
+}
+.contenedor{
+    grid-area: contenedor;
+}
+
+.contenedor-logo{
+    @include flex;
+    flex-direction: column;
+    img {
+        width: ($anchoConPorcentaje/10);
+        border-radius: 50%;
+    }
+    h2{
+        width: $anchoConPorcentaje;
+        height: 40px;
+        text-align: center;
+        background-color: $colorFondoTitulo;
+        color: $colorLetrasTitulo;
+        font-size: 2rem;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding-top:5px ;
+    }    
+}
+
+
+aside {
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color: $colorFondoAside;
+    h3 {
+        font-size: 20px;
+        font-family: $tipoDeLetra;
+        text-align: center;
+        color: $colorLetraTituInicio;
+        background-color: $colorFondoTituInicio;
+        padding: 8px;
+    }
+    p {
+        font-size: 18px;
+        color: $colorLetraParrafo;
+        font-family: $tipoDeLetra;
+    }
+}
+.nav-item a:hover {
+    background-color: $colorFondoNavHover;
+}
+
+/*AQUI QUIEN SOY*/
+#texto {
+    margin-top: 3%;
+    background: linear-gradient(transparent , $colorGradientFondoCuadro ,transparent );
+}
+#titulo {
+    text-align: center;
+    font-size: 35px;
+    color: $colorLetraTituQuienS;
+    text-decoration: underline currentColor ;
+    grid-area: titulo;
+}
+#parrafo {
+    text-align: center;
+    color: $colorLetraParrafoQuienS;
+    margin-top: 1%;
+    font-size: 23px;
+    grid-area: parrafo;
+}
+
+/*AQUI PUNTO DE VENTA*/
+#ubicacion {
+    width: ($anchoConPx/5)*4 ;
+    height: 300px;
+    margin-left: 35%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.subtitu {
+    margin-top: 2%;
+    margin-bottom: 4%;
+    background: $colorFondoTituloUbi ;
+    color: $colorLetraTituloUbi ;
+    font-size: 22px;
+    text-align: center;
+}
+
+/*AQUI PRODUCTOS*/
+#title {
+    background: $colorFondoTituloProductos;
+    color: $colorLetraTituloProductos;
+    margin-top: 8%;
+    font-size: 35px;
+    text-align: center;
+}
+
+
+/*footer*/
+.footer{
+    @include flex;
+    margin-top: 30px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: $anchoConPorcentaje;
+    height: 250px;
+    background-color: $colorFondoFooter;
+
+    grid-area: footer;
+
+}
+-----logosCard-------
+.footer-pagos{
+    width: $anchoConPorcentaje/5 ;
+    color: $colorLetraFooter;
+
+    grid-area: pagos;
+    h3{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    ul{
+        @include flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 30px;
+        li{
+            list-style: none;
+            border-radius: 50%;
+            background-color: $colorFondoLogFooter;
+            width: ($anchoConPx/10)+10;
+            height: 60px;
+            justify-content: center;
+            @include flex;
+            a{
+                font-size: 2rem;
+                color: $colorLogoFooter;
+            }
+        }
+    }
+}
+
+---logosRedes-------
+
+.footer-redes{
+    height: auto;
+    width: $anchoConPorcentaje/5;
+    color: $colorLetraFooter;
+
+    grid-area: redes;
+    h3{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    ul{
+        @include flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 30px;
+        li{
+            @include flex;
+            list-style: none;
+            border-radius: 50%;
+            background-color: $colorFondoLogFooter;
+            width: ($anchoConPx/10);
+            height: 50px;
+            justify-content: center;
+            a{
+                font-size: 2rem;
+                color: $colorLogoFooter;
+                transition: .5s;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+.footer-redes ul li a:hover{
+    transform: scale(1.2);
+}
+
+---logosNumber-------
+
+.footer-number{
+    color: $colorLetraFooter;
+    font-size: 1.5rem;
+
+    grid-area: num;
+}
+
+/*=========MEDIAQUERIES=======*/
+
+@media screen and (min-width:320px) {
+.body{
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto  auto auto;
+    grid-template-areas: 
+        "contenedor contenedor contenedor"
+        "section section section"
+        "footer footer footer";
+}
+
+/*INDEX*/
+.contenedor-logo {
+    img{
+        width: ($anchoConPx/5)-10;
+    }
+    h2{
+        margin: 3px;
+        font-size: 20px ;
+    }
+}
+
+/*CONTACTO*/
+.title-form {
+    display:inline-block;
+    text-align: center;
+    margin-top: 12%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: $colorFondoTituloContacto;
+    color: $colorLetraTituloContacto;
+    font-size: 20px;
+}
+label {
+    margin-top: 1%;
+}
+
+/*QUIÉN SOY*/
+#texto {
+    border: 3px solid $colorBordeCuadro;
+    display: grid ;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr 4fr;
+    grid-template-areas: "titulo" "parrafo";
+    width: ($anchoConPorcentaje)-20;
+    margin-left: 10%;
+    padding: 3%;
+}
+
+/*====UBICACION=====*/
+#ubicacion{
+    width: ($anchoConPorcentaje)-10;
+    height: 80%;
+    margin: auto;
+    overflow: hidden;
+    .iframe{
+        width: $anchoConPorcentaje;
+        height: 100%;
+        iframe{
+            width: $anchoConPorcentaje;
+            height: 100%;
+        }
+    }
+}
+
+
+
+
+
+/*footer*/
+.footer{
+    height: 300px;
+    color: $colorLetraFooter;
+    margin-bottom: 50px;
+    display: grid;
+    grid-auto-columns: repeat(1,1fr);
+    grid-template-rows:repeat(3,1fr);
+    grid-template-areas: 
+        "num "
+        "pagos "
+        "redes ";
+        ul{
+            margin-top: 5px;
+            li{
+                width: ($anchoConPx/10)-20 ;
+                height: 30px;
+                a{
+                    font-size: 15px;
+                }
+            }
+        }
+}
+
+//logos pagos
+
+.footer-pagos{
+    width: $anchoAuto;
+    color: $colorLetraFooter;
+
+    grid-area: pagos;
+    h3{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    ul{
+        @include flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 30px;
+        li{
+            list-style: none;
+            border-radius: 50%;
+            background-color: $colorFondoLogFooter;
+            width: ($anchoConPx/10)-10;
+            height: 40px;
+            justify-content: center;
+            @include flex;
+            a{
+                font-size: 1rem;
+                color: $colorLogoFooter;
+            }
+        }
+    }
+}
+
+//logos redes
+
+.footer-redes{
+    height: auto;
+    width: $anchoAuto;
+    color: $colorLetraFooter;
+
+    grid-area: redes;
+    h3{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    ul{
+        @include flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 30px;
+        li{
+            @include flex;
+            list-style: none;
+            border-radius: 50%;
+            background-color: $colorFondoLogFooter;
+            width: ($anchoConPx/10)-20;
+            height: 40px;
+            justify-content: center;
+            a{
+                font-size: 1rem;
+                color: $colorLogoFooter;
+                transition: .5s;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+.footer-number p{
+    text-align: center;
+}
+
+/*PRODUCTOS*/
+#title {
+    margin-top: 12%;
+    font-size: 20px;
+}
+}
+
+
+/*========================================================*/
+/*========================================================*/
+/*========================================================*/
+/*========================================================*/
+
+
+@media  screen and (min-width:1000px) {
+.contenedor-logo{
+    margin-top: 20px;
+    img {
+        width: ($anchoConPx/5)+50px ;
+    }
+}
+
+/*QUIÉN SOY*/
+#texto {
+    border: 5px solid $colorBordeCuadro;
+    display: grid ;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr 4fr;
+    grid-template-areas: "titulo" "parrafo";
+    width: ($anchoConPorcentaje/2)+30% ;
+    margin-left: 20%;
+    padding: 3%;
+}
+
+/*CONTACTO*/
+.title-form {
+    display:inline-block;
+    text-align: center;
+    margin-top: 12%;
+    margin-left: 25%;
+    background-color: $colorFondoTituloContacto;
+    color: $colorLetraTituloContacto;
+    font-size: 30px;
+}
+label {
+    margin-top: 1%;
+}
+
+/*footer*/
+.footer{
+    @include flex;
+    margin-top: 30px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: $anchoConPorcentaje;
+    height: 130px;
+    background-color: $colorFondoFooter;
+}
+/*logosCard-------*/
+.footer-pagos{
+    width: ($anchoConPorcentaje/5) ;
+    color: $colorLetraFooter;
+    h3{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    ul{
+        @include flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 30px;
+        li{
+            @include flex;
+            list-style: none;
+            border-radius: 50%;
+            background-color: $colorFondoLogFooter;
+            width: ($anchoConPx)-440px ;
+            height: 60px;
+            justify-content: center;
+            a{
+                font-size: 2rem;
+                color: $colorLogoFooter;
+            }
+        }
+    }
+}
+
+/*logosRedes-------*/
+.footer-redes{
+    height: auto;
+    width: $anchoConPorcentaje/5 ;
+    color: $colorLetraFooter;
+    h3{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    ul{
+        @include flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 30px;
+        li{
+            @include flex;
+            list-style: none;
+            border-radius: 50%;
+            background-color: $colorFondoLogFooter;
+            width: ($anchoConPx/10) ;
+            height: 50px;
+            justify-content: center;
+            a{
+                font-size: 2rem;
+                color: $colorLogoFooter;
+                transition: .5s;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+/*logosNumber-------*/
+.footer-number {
+    color: $colorLetraFooter;
+    font-size: 1.5rem;
+}
+
+#ubicacion{
+    width: ($anchoConPorcentaje/2);
+    height:80%;
+    margin: auto;
+    overflow: hidden;
+    .iframe{
+        width: $anchoConPorcentaje;
+        height: 100%;
+        iframe{
+            width: $anchoConPorcentaje;
+            height: 100%;
+        }
+    }
+}
+}

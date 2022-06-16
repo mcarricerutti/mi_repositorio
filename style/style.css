@@ -1,0 +1,424 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/fondonuevo.jpg);
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: cursive;
+  display: grid; }
+
+/*--INDEX--*/
+.section {
+  grid-area: section; }
+
+.contenedor {
+  grid-area: contenedor; }
+
+.contenedor-logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .contenedor-logo img {
+    width: 10%;
+    border-radius: 50%; }
+  .contenedor-logo h2 {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: #EE9898;
+    color: white;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-top: 5px; }
+
+aside {
+  margin-top: 40px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.8); }
+  aside h3 {
+    font-size: 20px;
+    font-family: cursive;
+    text-align: center;
+    color: white;
+    background-color: #e69494;
+    padding: 8px; }
+  aside p {
+    font-size: 18px;
+    color: #e67d7d;
+    font-family: cursive; }
+
+.nav-item a:hover {
+  background-color: #F3D0D0; }
+
+/*AQUI QUIEN SOY*/
+#texto {
+  margin-top: 3%;
+  background: linear-gradient(transparent, #d79292, transparent); }
+
+#titulo {
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  text-decoration: underline currentColor;
+  grid-area: titulo; }
+
+#parrafo {
+  text-align: center;
+  color: #ece6e6;
+  margin-top: 1%;
+  font-size: 23px;
+  grid-area: parrafo; }
+
+/*AQUI PUNTO DE VENTA*/
+#ubicacion {
+  width: 400px;
+  height: 300px;
+  margin-left: 35%;
+  margin-top: 2%;
+  margin-bottom: 2%; }
+
+.subtitu {
+  margin-top: 2%;
+  margin-bottom: 4%;
+  background: white;
+  color: #bda1a1;
+  font-size: 22px;
+  text-align: center; }
+
+/*AQUI PRODUCTOS*/
+#title {
+  background: white;
+  color: #b69696;
+  margin-top: 8%;
+  font-size: 35px;
+  text-align: center; }
+
+/*footer*/
+.footer {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 250px;
+  background-color: #faebd7;
+  grid-area: footer; }
+
+-----logosCard-------
+.footer-pagos {
+  width: 20%;
+  color: #B1ACAC;
+  grid-area: pagos; }
+  -----logosCard-------
+.footer-pagos h3 {
+    font-size: 1.5rem;
+    text-align: center; }
+  -----logosCard-------
+.footer-pagos ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px; }
+    -----logosCard-------
+.footer-pagos ul li {
+      list-style: none;
+      border-radius: 50%;
+      background-color: #EE9898;
+      width: 60px;
+      height: 60px;
+      justify-content: center;
+      display: flex;
+      align-items: center; }
+      -----logosCard-------
+.footer-pagos ul li a {
+        font-size: 2rem;
+        color: white; }
+
+---logosRedes-------
+.footer-redes {
+  height: auto;
+  width: 20%;
+  color: #B1ACAC;
+  grid-area: redes; }
+  ---logosRedes-------
+.footer-redes h3 {
+    font-size: 1.5rem;
+    text-align: center; }
+  ---logosRedes-------
+.footer-redes ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px; }
+    ---logosRedes-------
+.footer-redes ul li {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      border-radius: 50%;
+      background-color: #EE9898;
+      width: 50px;
+      height: 50px;
+      justify-content: center; }
+      ---logosRedes-------
+.footer-redes ul li a {
+        font-size: 2rem;
+        color: white;
+        transition: .5s; }
+        ---logosRedes-------
+.footer-redes ul li a:hover {
+          transform: scale(1.2); }
+
+.footer-redes ul li a:hover {
+  transform: scale(1.2); }
+
+---logosNumber-------
+.footer-number {
+  color: #B1ACAC;
+  font-size: 1.5rem;
+  grid-area: num; }
+
+/*=========MEDIAQUERIES=======*/
+@media screen and (min-width: 320px) {
+  .body {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto  auto auto;
+    grid-template-areas: "contenedor contenedor contenedor" "section section section" "footer footer footer"; }
+  /*INDEX*/
+  .contenedor-logo img {
+    width: 90px; }
+  .contenedor-logo h2 {
+    margin: 3px;
+    font-size: 20px; }
+  /*CONTACTO*/
+  .title-form {
+    display: inline-block;
+    text-align: center;
+    margin-top: 12%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: white;
+    color: #b69696;
+    font-size: 20px; }
+  label {
+    margin-top: 1%; }
+  /*QUIÉN SOY*/
+  #texto {
+    border: 3px solid #EE9898;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr 4fr;
+    grid-template-areas: "titulo" "parrafo";
+    width: 80%;
+    margin-left: 10%;
+    padding: 3%; }
+  /*====UBICACION=====*/
+  #ubicacion {
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    overflow: hidden; }
+    #ubicacion .iframe {
+      width: 100%;
+      height: 100%; }
+      #ubicacion .iframe iframe {
+        width: 100%;
+        height: 100%; }
+  /*footer*/
+  .footer {
+    height: 300px;
+    color: #B1ACAC;
+    margin-bottom: 50px;
+    display: grid;
+    grid-auto-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "num " "pagos " "redes "; }
+    .footer ul {
+      margin-top: 5px; }
+      .footer ul li {
+        width: 30px;
+        height: 30px; }
+        .footer ul li a {
+          font-size: 15px; }
+  .footer-pagos {
+    width: auto;
+    color: #B1ACAC;
+    grid-area: pagos; }
+    .footer-pagos h3 {
+      font-size: 1.5rem;
+      text-align: center; }
+    .footer-pagos ul {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 30px; }
+      .footer-pagos ul li {
+        list-style: none;
+        border-radius: 50%;
+        background-color: #EE9898;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        display: flex;
+        align-items: center; }
+        .footer-pagos ul li a {
+          font-size: 1rem;
+          color: white; }
+  .footer-redes {
+    height: auto;
+    width: auto;
+    color: #B1ACAC;
+    grid-area: redes; }
+    .footer-redes h3 {
+      font-size: 1.5rem;
+      text-align: center; }
+    .footer-redes ul {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 30px; }
+      .footer-redes ul li {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        border-radius: 50%;
+        background-color: #EE9898;
+        width: 30px;
+        height: 40px;
+        justify-content: center; }
+        .footer-redes ul li a {
+          font-size: 1rem;
+          color: white;
+          transition: .5s; }
+          .footer-redes ul li a:hover {
+            transform: scale(1.2); }
+  .footer-number p {
+    text-align: center; }
+  /*PRODUCTOS*/
+  #title {
+    margin-top: 12%;
+    font-size: 20px; } }
+
+/*========================================================*/
+/*========================================================*/
+/*========================================================*/
+/*========================================================*/
+@media screen and (min-width: 1000px) {
+  .contenedor-logo {
+    margin-top: 20px; }
+    .contenedor-logo img {
+      width: 150px; }
+  /*QUIÉN SOY*/
+  #texto {
+    border: 5px solid #EE9898;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr 4fr;
+    grid-template-areas: "titulo" "parrafo";
+    width: 80%;
+    margin-left: 20%;
+    padding: 3%; }
+  /*CONTACTO*/
+  .title-form {
+    display: inline-block;
+    text-align: center;
+    margin-top: 12%;
+    margin-left: 25%;
+    background-color: white;
+    color: #b69696;
+    font-size: 30px; }
+  label {
+    margin-top: 1%; }
+  /*footer*/
+  .footer {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 130px;
+    background-color: #faebd7; }
+  /*logosCard-------*/
+  .footer-pagos {
+    width: 20%;
+    color: #B1ACAC; }
+    .footer-pagos h3 {
+      font-size: 1.5rem;
+      text-align: center; }
+    .footer-pagos ul {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 30px; }
+      .footer-pagos ul li {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        border-radius: 50%;
+        background-color: #EE9898;
+        width: 60px;
+        height: 60px;
+        justify-content: center; }
+        .footer-pagos ul li a {
+          font-size: 2rem;
+          color: white; }
+  /*logosRedes-------*/
+  .footer-redes {
+    height: auto;
+    width: 20%;
+    color: #B1ACAC; }
+    .footer-redes h3 {
+      font-size: 1.5rem;
+      text-align: center; }
+    .footer-redes ul {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 30px; }
+      .footer-redes ul li {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        border-radius: 50%;
+        background-color: #EE9898;
+        width: 50px;
+        height: 50px;
+        justify-content: center; }
+        .footer-redes ul li a {
+          font-size: 2rem;
+          color: white;
+          transition: .5s; }
+          .footer-redes ul li a:hover {
+            transform: scale(1.2); }
+  /*logosNumber-------*/
+  .footer-number {
+    color: #B1ACAC;
+    font-size: 1.5rem; }
+  #ubicacion {
+    width: 50%;
+    height: 80%;
+    margin: auto;
+    overflow: hidden; }
+    #ubicacion .iframe {
+      width: 100%;
+      height: 100%; }
+      #ubicacion .iframe iframe {
+        width: 100%;
+        height: 100%; } }
