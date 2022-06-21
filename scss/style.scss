@@ -1,10 +1,10 @@
-@import "scss/pages";
-@import "scss/index";
-@import "scss/quienSoy";
-@import "scss/contacto";
-@import "scss/productos";
-@import "scss/puntoDeVenta";
-@import "scss/mixins";
+@import "partials/pages";
+@import "partials/index";
+@import "partials/quienSoy";
+@import "partials/contacto";
+@import "partials/productos";
+@import "partials/puntoDeVenta";
+@import "variables/mixins";
 
 *{
    margin: 0;
