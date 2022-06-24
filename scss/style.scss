@@ -34,33 +34,29 @@
     flex-direction: column;
     img {
         width: ($anchoConPorcentaje/10);
-        border-radius: 50%;
+        @include border (50%);
     }
-    h2{
+    h1{
+        @include alingTex;
         width: $anchoConPorcentaje;
         height: $altoConPx/10 ;
-        text-align: center;
         background-color: $colorFondoTitulo;
         color: $colorLetrasTitulo;
         font-size: 2rem;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        padding-top:5px ;
+        @include margin(20px,5px,0px,0px);
+        @include padding(5px,0px,0px,0px);
     }    
 }
 
 
 aside {
-    margin-top: 40px;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
+    @include margin (40px,0px,0px,0px);
+    @include padding (10px,10px,10px,10px);
     background-color: $colorFondoAside;
-    h3 {
+    h2 {
         font-size: 20px;
         font-family: $tipoDeLetra;
-        text-align: center;
+        @include alingTex;
         color: $colorLetraTituInicio;
         background-color: $colorFondoTituInicio;
         padding: 8px;
@@ -77,20 +73,20 @@ aside {
 
 /*AQUI QUIEN SOY*/
 #texto {
-    margin-top: 3%;
+    @include margin(3%,0,0,0);
     background: linear-gradient(transparent , $colorGradientFondoCuadro ,transparent );
 }
 #titulo {
-    text-align: center;
+    @include alingTex;
     font-size: 35px;
     color: $colorLetraTituQuienS;
     text-decoration: underline currentColor ;
     grid-area: titulo;
 }
 #parrafo {
-    text-align: center;
+    @include alingTex;
     color: $colorLetraParrafoQuienS;
-    margin-top: 1%;
+    @include margin(1%,0,0,0);
     font-size: 23px;
     grid-area: parrafo;
 }
@@ -99,38 +95,46 @@ aside {
 #ubicacion {
     width: ($anchoConPx/5)*4 ;
     height: ($altoConPx)-100px ;
-    margin-left: 35%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    @include margin(2%,2%,35%,0);
 }
 .subtitu {
-    margin-top: 2%;
-    margin-bottom: 4%;
+    @extend #ubicacion;
     background: $colorFondoTituloUbi ;
     color: $colorLetraTituloUbi ;
     font-size: 22px;
-    text-align: center;
+    @include alingTex;
 }
 
 /*AQUI PRODUCTOS*/
 #title {
     background: $colorFondoTituloProductos;
     color: $colorLetraTituloProductos;
-    margin-top: 8%;
+    @include margin(8%,0,0,0);
     font-size: 35px;
-    text-align: center;
+    @include alingTex;
 }
 
 
 /*footer*/
+
+//    MAP
+$footer:(
+    f-wrap: wrap,
+    just-cont: space-evenly,
+    color:$colorFondoFooter,
+    colorLetras: $colorLetraFooter,
+    colorFondLog:$colorFondoLogFooter,
+    colorLog:$colorLogoFooter,
+);
+
 .footer{
     @include flex;
-    margin-top: 30px;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    @include margin(30px,0,0,0);
+    justify-content: map-get($footer,just-cont);
+    flex-wrap: map-get($footer,f-wrap);
     width: $anchoConPorcentaje;
     height: ($altoConPx)-150px;
-    background-color: $colorFondoFooter;
+    background-color: map-get($footer,color);
 
     grid-area: footer;
 
@@ -138,29 +142,29 @@ aside {
 -----logosCard-------
 .footer-pagos{
     width: $anchoConPorcentaje/5 ;
-    color: $colorLetraFooter;
+    color: map-get($footer,colorLetras);
 
     grid-area: pagos;
     h3{
         font-size: 1.5rem;
-        text-align: center;
+        @include alingTex;
     }
     ul{
         @include flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        margin-top: 30px;
+        justify-content: map-get($footer,just-cont);
+        @include margin(30px,0,0,0);
         li{
             list-style: none;
-            border-radius: 50%;
-            background-color: $colorFondoLogFooter;
+            @include border (50%);
+            background-color: map-get($footer,colorFondLog);
             width: ($anchoConPx/10)+10;
             height: ($altoConPx)-340px;
             justify-content: center;
             @include flex;
             a{
                 font-size: 2rem;
-                color: $colorLogoFooter;
+                color: map-get($footer,colorLog);
             }
         }
     }
@@ -171,29 +175,29 @@ aside {
 .footer-redes{
     height: $altoAuto;
     width: $anchoConPorcentaje/5;
-    color: $colorLetraFooter;
+    color: map-get($footer,colorLetras);
 
     grid-area: redes;
     h3{
         font-size: 1.5rem;
-        text-align: center;
+        @include alingTex;
     }
     ul{
         @include flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        margin-top: 30px;
+        justify-content: map-get($footer,just-cont);
+        @include margin(30px,0,0,0);
         li{
             @include flex;
             list-style: none;
-            border-radius: 50%;
-            background-color: $colorFondoLogFooter;
+            @include border (50%);
+            background-color: map-get($footer,colorFondLog);
             width: ($anchoConPx/10);
             height: ($altoConPx)-350px;
             justify-content: center;
             a{
                 font-size: 2rem;
-                color: $colorLogoFooter;
+                color: map-get($footer,colorLog);
                 transition: .5s;
                 &:hover{
                     transform: scale(1.2);
@@ -209,7 +213,7 @@ aside {
 ---logosNumber-------
 
 .footer-number{
-    color: $colorLetraFooter;
+    color: map-get($footer,colorLetras);
     font-size: 1.5rem;
 
     grid-area: num;
@@ -232,7 +236,7 @@ aside {
     img{
         width: ($anchoConPx/5)-10;
     }
-    h2{
+    h1{
         margin: 3px;
         font-size: 20px ;
     }
@@ -241,16 +245,14 @@ aside {
 /*CONTACTO*/
 .title-form {
     display:inline-block;
-    text-align: center;
-    margin-top: 12%;
-    margin-left: 10%;
-    margin-right: 10%;
+    @include alingTex;
+    @include margin(12%,0,10%,10%);
     background-color: $colorFondoTituloContacto;
     color: $colorLetraTituloContacto;
     font-size: 20px;
 }
 label {
-    margin-top: 1%;
+    @include margin(1%,0,0,0);
 }
 
 /*QUIÉN SOY*/
@@ -261,7 +263,7 @@ label {
     grid-template-rows: 2fr 4fr;
     grid-template-areas: "titulo" "parrafo";
     width: ($anchoConPorcentaje)-20;
-    margin-left: 10%;
+    @include margin(0,0,10%,0);
     padding: 3%;
 }
 
@@ -289,7 +291,7 @@ label {
 .footer{
     height: ($altoConPx)-100px;
     color: $colorLetraFooter;
-    margin-bottom: 50px;
+    @include margin(0,50px,0,0);
     display: grid;
     grid-auto-columns: repeat(1,1fr);
     grid-template-rows:repeat(3,1fr);
@@ -298,7 +300,7 @@ label {
         "pagos "
         "redes ";
         ul{
-            margin-top: 5px;
+            @include margin(5px,0,0,0);
             li{
                 width: ($anchoConPx/10)-20 ;
                 height: ($altoConPx)-370px;
@@ -318,16 +320,16 @@ label {
     grid-area: pagos;
     h3{
         font-size: 1.5rem;
-        text-align: center;
+        @include alingTex;
     }
     ul{
         @include flex;
         flex-direction: row;
         justify-content: space-evenly;
-        margin-top: 30px;
+        @include margin(30px,0,0,0);
         li{
             list-style: none;
-            border-radius: 50%;
+            @include border (50%);
             background-color: $colorFondoLogFooter;
             width: ($anchoConPx/10)-10;
             height: ($altoConPx)-360px;
@@ -351,17 +353,17 @@ label {
     grid-area: redes;
     h3{
         font-size: 1.5rem;
-        text-align: center;
+        @include alingTex;
     }
     ul{
         @include flex;
         flex-direction: row;
         justify-content: space-evenly;
-        margin-top: 30px;
+        @include margin(30px,0,0,0);
         li{
             @include flex;
             list-style: none;
-            border-radius: 50%;
+            @include border (50%);
             background-color: $colorFondoLogFooter;
             width: ($anchoConPx/10)-20;
             height: ($altoConPx)-360px;
@@ -378,12 +380,12 @@ label {
     }
 }
 .footer-number p{
-    text-align: center;
+    @include alingTex;
 }
 
 /*PRODUCTOS*/
 #title {
-    margin-top: 12%;
+    @include margin(12%,0,0,0);
     font-size: 20px;
 }
 }
@@ -397,7 +399,7 @@ label {
 
 @media  screen and (min-width:1000px) {
 .contenedor-logo{
-    margin-top: 20px;
+    @include margin(20px,0,0,0);
     img {
         width: ($anchoConPx/5)+50px ;
     }
@@ -411,28 +413,27 @@ label {
     grid-template-rows: 2fr 4fr;
     grid-template-areas: "titulo" "parrafo";
     width: ($anchoConPorcentaje/2)+30% ;
-    margin-left: 20%;
+    @include margin(0,0,20%,0);
     padding: 3%;
 }
 
 /*CONTACTO*/
 .title-form {
     display:inline-block;
-    text-align: center;
-    margin-top: 12%;
-    margin-left: 25%;
+    @include alingTex;
+    @include margin(8%,0,25%,0);
     background-color: $colorFondoTituloContacto;
     color: $colorLetraTituloContacto;
     font-size: 30px;
 }
 label {
-    margin-top: 1%;
+    @include margin(1%,0,0,0);
 }
 
 /*footer*/
 .footer{
     @include flex;
-    margin-top: 30px;
+    @include margin(30px,0,0,0);
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: $anchoConPorcentaje;
@@ -445,17 +446,17 @@ label {
     color: $colorLetraFooter;
     h3{
         font-size: 1.5rem;
-        text-align: center;
+        @include alingTex;
     }
     ul{
         @include flex;
         flex-direction: row;
         justify-content: space-evenly;
-        margin-top: 30px;
+        @include margin(30px,0,0,0);
         li{
             @include flex;
             list-style: none;
-            border-radius: 50%;
+            @include border (50%);
             background-color: $colorFondoLogFooter;
             width: ($anchoConPx)-440px ;
             height: ($altoConPx)-340px;
@@ -475,17 +476,17 @@ label {
     color: $colorLetraFooter;
     h3{
         font-size: 1.5rem;
-        text-align: center;
+        @include alingTex;
     }
     ul{
         @include flex;
         flex-direction: row;
         justify-content: space-evenly;
-        margin-top: 30px;
+        @include margin(30px,0,0,0);
         li{
             @include flex;
             list-style: none;
-            border-radius: 50%;
+            @include border (50%);
             background-color: $colorFondoLogFooter;
             width: ($anchoConPx/10) ;
             height: ($altoConPx)-350px;

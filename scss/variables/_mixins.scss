@@ -3,3 +3,25 @@
     align-items: center;
 }
 
+@mixin alingTex{
+    text-align: center;
+}
+
+@mixin border ($border-radius){
+    border-radius: $border-radius;
+}
+
+@mixin margin ($top,$bottom,$left,$right){
+    margin-top: $top;
+    margin-bottom: $bottom;
+    margin-left: $left;
+    margin-right: $right;
+}
+
+@mixin padding ($top,$bottom,$left,$right){
+    padding-top: $top;
+    padding-bottom: $bottom;
+    padding-left: $left;
+    padding-right: $right;
+}
+
