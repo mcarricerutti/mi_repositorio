@@ -19,8 +19,61 @@
     font-family:$tipoDeLetra;
     
     display: grid;
-
 }
+
+.conte-pages{
+    @include margin(10%,10%,0,0);
+}
+
+/*--NAV--*/
+nav{
+    background-color: $colorLetrasTitulo;
+    @include margin (5px,0,0,0);
+    div{
+        div{
+            .cuadro-position{
+                border:solid 1px $colorNavyAside;
+            }
+            .navbar-brand{
+                color: $colorNavyAside;
+            }
+            .navbar-brand:hover{
+                background-color: $colorFondoNavHover;
+                color: $colorLetrasTitulo;
+            }
+        }
+        div{
+            ul{
+                li{
+                    .nav-link{
+                        color: $colorNavyAside;
+                    }
+                    .nav-link:hover{
+                        background-color: $colorFondoNavHover;
+                        color: $colorLetrasTitulo;
+                    }
+                }
+            }
+            form{
+                .form-control{
+                    border:solid 1px $colorBuscador;
+                }
+                .btn-outline{
+                    background: $colorBuscador;
+                    color:$colorLetrasTitulo;
+                }
+                .btn-outline:hover{
+                    background-color: $colorLetrasTitulo;
+                    color: $colorBuscador;
+                }
+            }
+        }
+    }
+}
+
+
+
+
 /*--INDEX--*/
 .section{
     grid-area: section;
@@ -42,53 +95,65 @@
         height: $altoConPx/10 ;
         background-color: $colorFondoTitulo;
         color: $colorLetrasTitulo;
-        font-size: 2rem;
+        @include tamaño(2rem);
         @include margin(20px,5px,0px,0px);
         @include padding(5px,0px,0px,0px);
     }    
 }
-
 
 aside {
     @include margin (40px,0px,0px,0px);
     @include padding (10px,10px,10px,10px);
     background-color: $colorFondoAside;
     h2 {
-        font-size: 20px;
-        font-family: $tipoDeLetra;
+        @include tamaño(20px);
+        font-family:$tipoDeLetraConte;
         @include alingTex;
         color: $colorLetraTituInicio;
         background-color: $colorFondoTituInicio;
         padding: 8px;
     }
     p {
-        font-size: 18px;
+        @include tamaño(18px);
         color: $colorLetraParrafo;
-        font-family: $tipoDeLetra;
+        font-family: $tipoDeLetraConte;
     }
-}
-.nav-item a:hover {
-    background-color: $colorFondoNavHover;
+    div{
+        .boton {
+            font-family:$tipoDeLetraConte;
+            background-color: $colorLetrasTitulo;
+            border:solid 1px $colorNavyAside;
+            color: $colorNavyAside;
+        }
+        .boton:hover{
+            background-color: $colorNavyAside;
+            border: solid 5px $colorLetrasTitulo;
+        }
+    }
 }
 
 /*AQUI QUIEN SOY*/
+
 #texto {
     @include margin(3%,0,0,0);
     background: linear-gradient(transparent , $colorGradientFondoCuadro ,transparent );
+
 }
 #titulo {
     @include alingTex;
-    font-size: 35px;
-    color: $colorLetraTituQuienS;
+    @include tamaño(35px);
+    color: $colorLetraParrafoQuienS;
     text-decoration: underline currentColor ;
     grid-area: titulo;
+    font-family: $tipoDeLetraConte;
 }
 #parrafo {
     @include alingTex;
     color: $colorLetraParrafoQuienS;
     @include margin(1%,0,0,0);
-    font-size: 23px;
+    @include tamaño(23px);
     grid-area: parrafo;
+    font-family: $tipoDeLetraConte;
 }
 
 /*AQUI PUNTO DE VENTA*/
@@ -101,7 +166,7 @@ aside {
     @extend #ubicacion;
     background: $colorFondoTituloUbi ;
     color: $colorLetraTituloUbi ;
-    font-size: 22px;
+    @include tamaño(22px);
     @include alingTex;
 }
 
@@ -109,11 +174,80 @@ aside {
 #title {
     background: $colorFondoTituloProductos;
     color: $colorLetraTituloProductos;
-    @include margin(8%,0,0,0);
-    font-size: 35px;
+    @include tamaño(35px);
     @include alingTex;
 }
+.cont-productos{
+    border: solid 5px $colorBordeConteProd;
+    @include margin (4%,0,0,0);
+    color: $colorLetrasProductos;
+    font-family: $tipoDeLetraConte;
+    .row{
+        div{
+            .card{
+                @include margin (4%,3%,0,0);
+                .row{
+                    .img-producto{
+                        width:60%;
+                        height: 50%;
+                        @include margin (2%,0,20%,0);
+                    }
+                }
+            }
+        }
+    }
+}
 
+.card-title{
+    @include subrayado;
+}
+/*--CONTACTO--*/
+.container{
+    .row{
+        .conte-formu{
+            @include margin (4%,10%,0,0);
+            background:$colorFondoFormu;
+            font-family: $tipoDeLetraConte;
+            fieldset{
+                color:$colorLetrasFormu;
+                div{
+                    legend{
+                        @include subrayado;
+                    }
+                }
+                div{
+                    @include margin(2%,0,0,0);
+                    input{
+                        border: solid 2px $colorFondoTituloContacto;
+                    }
+                    #emailHelp{
+                        color:$colorLetrasAviso;
+                    }
+                }
+                div{
+                    @include margin(2%,3%,0,0);
+                    label{
+                        @include margin(0,0,0,2%);
+                    }
+                    select{
+                        color:$colorLetrasInternasCuadro;
+                    }
+                }
+                div{
+                    textarea{
+                        color:$colorLetrasInternasCuadro;
+                    }
+                }
+                .botones-formu{
+                    button{
+                        background-color: $colorBotonesFormu;
+                        border:solid 2px $colorBotonesFormu;
+                    }
+                }
+            }
+        }
+    }
+}
 
 /*footer*/
 
@@ -146,7 +280,7 @@ $footer:(
 
     grid-area: pagos;
     h3{
-        font-size: 1.5rem;
+        @include tamaño(1.5rem);
         @include alingTex;
     }
     ul{
@@ -163,7 +297,7 @@ $footer:(
             justify-content: center;
             @include flex;
             a{
-                font-size: 2rem;
+                @include tamaño(2rem);
                 color: map-get($footer,colorLog);
             }
         }
@@ -179,7 +313,7 @@ $footer:(
 
     grid-area: redes;
     h3{
-        font-size: 1.5rem;
+        @include tamaño(1.5rem);
         @include alingTex;
     }
     ul{
@@ -196,7 +330,7 @@ $footer:(
             height: ($altoConPx)-350px;
             justify-content: center;
             a{
-                font-size: 2rem;
+                @include tamaño(2rem);
                 color: map-get($footer,colorLog);
                 transition: .5s;
                 &:hover{
@@ -214,7 +348,7 @@ $footer:(
 
 .footer-number{
     color: map-get($footer,colorLetras);
-    font-size: 1.5rem;
+    @include tamaño(1.5rem);
 
     grid-area: num;
 }
@@ -238,7 +372,7 @@ $footer:(
     }
     h1{
         margin: 3px;
-        font-size: 20px ;
+        @include tamaño(20px);
     }
 }
 
@@ -249,8 +383,10 @@ $footer:(
     @include margin(12%,0,10%,10%);
     background-color: $colorFondoTituloContacto;
     color: $colorLetraTituloContacto;
-    font-size: 20px;
+    @include tamaño(18px);
 }
+
+
 label {
     @include margin(1%,0,0,0);
 }
@@ -305,7 +441,7 @@ label {
                 width: ($anchoConPx/10)-20 ;
                 height: ($altoConPx)-370px;
                 a{
-                    font-size: 15px;
+                    @include tamaño(15px);
                 }
             }
         }
@@ -319,7 +455,7 @@ label {
 
     grid-area: pagos;
     h3{
-        font-size: 1.5rem;
+        @include tamaño(1.5rem);
         @include alingTex;
     }
     ul{
@@ -336,7 +472,7 @@ label {
             justify-content: center;
             @include flex;
             a{
-                font-size: 1rem;
+                @include tamaño(1rem);
                 color: $colorLogoFooter;
             }
         }
@@ -352,7 +488,7 @@ label {
 
     grid-area: redes;
     h3{
-        font-size: 1.5rem;
+        @include tamaño(1.5rem);
         @include alingTex;
     }
     ul{
@@ -369,7 +505,7 @@ label {
             height: ($altoConPx)-360px;
             justify-content: center;
             a{
-                font-size: 1rem;
+                @include tamaño(1rem);
                 color: $colorLogoFooter;
                 transition: .5s;
                 &:hover{
@@ -386,7 +522,10 @@ label {
 /*PRODUCTOS*/
 #title {
     @include margin(12%,0,0,0);
-    font-size: 20px;
+    @include tamaño(20px);
+}
+.cont-productos{
+    @include margin(5%,10%,0,0);
 }
 }
 
@@ -424,7 +563,7 @@ label {
     @include margin(8%,0,25%,0);
     background-color: $colorFondoTituloContacto;
     color: $colorLetraTituloContacto;
-    font-size: 30px;
+    @include tamaño(24px);
 }
 label {
     @include margin(1%,0,0,0);
@@ -445,7 +584,7 @@ label {
     width: ($anchoConPorcentaje/5) ;
     color: $colorLetraFooter;
     h3{
-        font-size: 1.5rem;
+        @include tamaño(1.5rem);
         @include alingTex;
     }
     ul{
@@ -462,7 +601,7 @@ label {
             height: ($altoConPx)-340px;
             justify-content: center;
             a{
-                font-size: 2rem;
+                @include tamaño(2rem);
                 color: $colorLogoFooter;
             }
         }
@@ -475,7 +614,7 @@ label {
     width: $anchoConPorcentaje/5 ;
     color: $colorLetraFooter;
     h3{
-        font-size: 1.5rem;
+        @include tamaño(1.5rem);
         @include alingTex;
     }
     ul{
@@ -492,7 +631,7 @@ label {
             height: ($altoConPx)-350px;
             justify-content: center;
             a{
-                font-size: 2rem;
+                @include tamaño(2rem);
                 color: $colorLogoFooter;
                 transition: .5s;
                 &:hover{
@@ -506,7 +645,7 @@ label {
 /*logosNumber-------*/
 .footer-number {
     color: $colorLetraFooter;
-    font-size: 1.5rem;
+    @include tamaño(1.5rem);
 }
 
 #ubicacion{

@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description" content="Querés hacer tu pedido? Hacé click aquí, y listo!">
-    <meta name="keywords"  content="CONTACTO, PEDIDO, ENVIO, DATOS, INFORMACIÓN, NOMBRES, ENCARGO, CLIENTES, VENTAS, PAGOS">
+    <meta name="keywords"
+        content="CONTACTO, PEDIDO, ENVIO, DATOS, INFORMACIÓN, NOMBRES, ENCARGO, CLIENTES, VENTAS, PAGOS">
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,10 +33,10 @@
 
     <header class="contenedor">
 
-        <nav class="navbar navbar-expand-lg bg-white" data-aos="fade-down" data-aos-duration="3000">
+        <nav class="navbar navbar-expand-lg" data-aos="fade-down" data-aos-duration="3000">
             <div class="container-fluid">
                 <div class="nav-item active">
-                    <a class="navbar-brand" style="color: #DA9191;" href="../index.html">Inicio></a>
+                    <a class="navbar-brand" href="../index.html">Inicio</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -45,24 +46,21 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" style="color: #DA9191;" href="quienSoy.html">Quién soy?</a>
+                            <a class="nav-link" href="quienSoy.html">Quién soy?</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: #DA9191; border:solid 1px #DA9191;"
-                                href="contacto.html"><strong>Contacto</strong></a>
+                            <a class="nav-link cuadro-position" href="contacto.html"><strong>Contacto></strong></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: #DA9191;" href="productos.html">Productos</a>
+                            <a class="nav-link" href="productos.html">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: #DA9191;" href="puntoDeVenta.html">Punto de venta</a>
+                            <a class="nav-link" href="puntoDeVenta.html">Punto de venta</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" style="border:solid 1px #ecafaf;" type="search"
-                            aria-label="Search">
-                        <button class="btn btn-outline" style="background: #ecafaf; color:#fdfdfd;"
-                            type="submit">Buscar</button>
+                        <input class="form-control me-2" type="search" aria-label="Search">
+                        <button class="btn btn-outline" type="submit">Buscar</button>
                     </form>
                 </div>
             </div>
@@ -72,42 +70,40 @@
             <div class="text-center">
                 <img src="../img/img.jpeg.jpg" alt="Logo">
             </div>
-            <h1>-MARTUSH-</h1>
+            <h1>-M A R T U S H-</h1>
             <h1>Cake Shop</h1>
         </div>
     </header>
 
 
 
-    <section class="section" style="margin-top: 10%; margin-bottom:10%;">
+    <section class="section">
 
         <h2 class="title-form">Hacé tu pedido completando el siguiente formulario:</h2>
         <div class="container">
             <div class="row">
-                <div class="col-sm-10 col-md-6 col-lg-6"
-                    style="margin-top: 4%;margin-bottom: 10%; background:rgba(223, 157, 157, 0.7); color:white" ;>
+                <div class="col-sm-10 col-md-6 col-lg-6 conte-formu">
                     <form class="cont-form">
                         <fieldset>
                             <div>
-                                <legend style="text-decoration:underline;">FORMULARIO:</legend>
+                                <legend>FORMULARIO:</legend>
                             </div>
                             <div class="input-group">
                                 <label for="Nombre">Nombre y Apellido</label>
                                 <input type="text" aria-label="First name" class="form-control">
                                 <input type="text" aria-label="Last name" class="form-control">
                             </div>
-                            <div style="margin-top: 2%;">
+                            <div>
                                 <label for="telefono">Teléfono</label>
-                                <input style="border: solid 2px white;" type="tel" name="teléfono" pattern="[0-9]+"
-                                    required>
+                                <input type="tel" name="teléfono" pattern="[0-9]+" required>
                             </div>
-                            <div class="mb-3">
+                            <div>
                                 <label for="exampleInputEmail1" class="form-label">Dirección de correo
                                     electrónico</label>
                                 <input type="email" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp">
-                                <div id="emailHelp" class="form-text" style="color:rgb(136, 132, 132);">Nunca
-                                    compartiremos su correo electrónico con nadie más.</div>
+                                <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con
+                                    nadie más.</div>
                             </div>
                             <div class="col-md-6">
                                 <label for="validationDefault03" class="form-label">Dirección</label>
@@ -117,9 +113,9 @@
                                 <label for="validationDefault03" class="form-label">Ciudad</label>
                                 <input type="text" class="form-control" id="validationDefault03" required>
                             </div>
-                            <div class="input-group mb-3" style="margin-top:2%;">
-                                <label for="Nombre" style=" margin-right: 2%;">Producto</label>
-                                <select class="form-select" id="inputGroupSelect01" style="color: rgb(172, 165, 165);">
+                            <div class="input-group">
+                                <label for="Nombre">Producto</label>
+                                <select class="form-select" id="inputGroupSelect01">
                                     <option selected>Eligelo aquí...</option>
                                     <option value="1">Torta</option>
                                     <option value="2">Tarta</option>
@@ -130,17 +126,12 @@
                                 </select>
                             </div>
                             <div class="form-floating">
-                                <textarea class="form-control" style="color:rgb(196, 184, 184);"
-                                    id="floatingTextarea">Personalizá TÚ pedido...</textarea>
-                                <!--- <label for="floatingTextarea" class="form-select" style="color:rgb(172, 165, 165);">Personaliza TÚ pedido...</label>-->
+                                <textarea class="form-control" id="floatingTextarea">Personalizá TÚ pedido...</textarea>
                             </div>
-                            <div style="margin-top:2%;">
-                                <button style="background-color: #dd7a7a;border:solid 2px #dd7a7a;" type="button"
-                                    class="btn btn-primary btn-sm">Enviar</button>
-                                <button style="background-color: #dd7a7a;border:solid 2px #dd7a7a;" type="button"
-                                    class="btn btn-secondary btn-sm">Volver a hacer</button>
-                                <button style="background-color: #dd7a7a;border:solid 2px #dd7a7a;" type="button"
-                                    class="btn btn-secondary btn-sm">Eliminar</button>
+                            <div class="botones-formu">
+                                <button type="button" class="btn btn-primary btn-sm">Enviar</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Volver a hacer</button>
+                                <button type="button" class="btn btn-secondary btn-sm">Eliminar</button>
                             </div>
                         </fieldset>
                     </form>

@@ -6,6 +6,13 @@
 @mixin alingTex{
     text-align: center;
 }
+@mixin subrayado {
+    text-decoration:underline;
+}
+
+@mixin tamaño ($font-size) {
+    font-size: $font-size;
+}
 
 @mixin border ($border-radius){
     border-radius: $border-radius;

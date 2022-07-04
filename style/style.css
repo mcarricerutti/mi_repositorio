@@ -12,6 +12,40 @@
   font-family: cursive;
   display: grid; }
 
+.conte-pages {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 0;
+  margin-right: 0; }
+
+/*--NAV--*/
+nav {
+  background-color: white;
+  margin-top: 5px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0; }
+  nav div div .cuadro-position {
+    border: solid 1px #DA9191; }
+  nav div div .navbar-brand {
+    color: #DA9191; }
+  nav div div .navbar-brand:hover {
+    background-color: #F3D0D0;
+    color: white; }
+  nav div div ul li .nav-link {
+    color: #DA9191; }
+  nav div div ul li .nav-link:hover {
+    background-color: #F3D0D0;
+    color: white; }
+  nav div div form .form-control {
+    border: solid 1px #ecafaf; }
+  nav div div form .btn-outline {
+    background: #ecafaf;
+    color: white; }
+  nav div div form .btn-outline:hover {
+    background-color: white;
+    color: #ecafaf; }
+
 /*--INDEX--*/
 .section {
   grid-area: section; }
@@ -54,7 +88,7 @@ aside {
   background-color: rgba(255, 255, 255, 0.8); }
   aside h2 {
     font-size: 20px;
-    font-family: cursive;
+    font-family: "Recursiva", sans-serif;
     text-align: center;
     color: white;
     background-color: #e69494;
@@ -62,10 +96,15 @@ aside {
   aside p {
     font-size: 18px;
     color: #e67d7d;
-    font-family: cursive; }
-
-.nav-item a:hover {
-  background-color: #F3D0D0; }
+    font-family: "Recursiva", sans-serif; }
+  aside div .boton {
+    font-family: "Recursiva", sans-serif;
+    background-color: white;
+    border: solid 1px #DA9191;
+    color: #DA9191; }
+  aside div .boton:hover {
+    background-color: #DA9191;
+    border: solid 5px white; }
 
 /*AQUI QUIEN SOY*/
 #texto {
@@ -78,19 +117,21 @@ aside {
 #titulo {
   text-align: center;
   font-size: 35px;
-  color: white;
+  color: #4d1a1a;
   text-decoration: underline currentColor;
-  grid-area: titulo; }
+  grid-area: titulo;
+  font-family: "Recursiva", sans-serif; }
 
 #parrafo {
   text-align: center;
-  color: #ece6e6;
+  color: #4d1a1a;
   margin-top: 1%;
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
   font-size: 23px;
-  grid-area: parrafo; }
+  grid-area: parrafo;
+  font-family: "Recursiva", sans-serif; }
 
 /*AQUI PUNTO DE VENTA*/
 #ubicacion, .subtitu {
@@ -111,12 +152,71 @@ aside {
 #title {
   background: white;
   color: #b69696;
-  margin-top: 8%;
+  font-size: 35px;
+  text-align: center; }
+
+.cont-productos {
+  border: solid 5px #ecafaf;
+  margin-top: 4%;
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
-  font-size: 35px;
-  text-align: center; }
+  color: #aca5a5;
+  font-family: "Recursiva", sans-serif; }
+  .cont-productos .row div .card {
+    margin-top: 4%;
+    margin-bottom: 3%;
+    margin-left: 0;
+    margin-right: 0; }
+    .cont-productos .row div .card .row .img-producto {
+      width: 60%;
+      height: 50%;
+      margin-top: 2%;
+      margin-bottom: 0;
+      margin-left: 20%;
+      margin-right: 0; }
+
+.card-title {
+  text-decoration: underline; }
+
+/*--CONTACTO--*/
+.container .row .conte-formu {
+  margin-top: 4%;
+  margin-bottom: 10%;
+  margin-left: 0;
+  margin-right: 0;
+  background: rgba(223, 157, 157, 0.7);
+  font-family: "Recursiva", sans-serif; }
+  .container .row .conte-formu fieldset {
+    color: #4d1a1a; }
+    .container .row .conte-formu fieldset div legend {
+      text-decoration: underline; }
+    .container .row .conte-formu fieldset div {
+      margin-top: 2%;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0; }
+      .container .row .conte-formu fieldset div input {
+        border: solid 2px white; }
+      .container .row .conte-formu fieldset div #emailHelp {
+        color: #888484; }
+    .container .row .conte-formu fieldset div {
+      margin-top: 2%;
+      margin-bottom: 3%;
+      margin-left: 0;
+      margin-right: 0; }
+      .container .row .conte-formu fieldset div label {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 2%; }
+      .container .row .conte-formu fieldset div select {
+        color: #aca5a5; }
+    .container .row .conte-formu fieldset div textarea {
+      color: #aca5a5; }
+    .container .row .conte-formu fieldset .botones-formu button {
+      background-color: #dd7a7a;
+      border: solid 2px #dd7a7a; }
 
 /*footer*/
 .footer {
@@ -225,7 +325,7 @@ aside {
     margin-right: 10%;
     background-color: white;
     color: #b69696;
-    font-size: 20px; }
+    font-size: 18px; }
   label {
     margin-top: 1%;
     margin-bottom: 0;
@@ -346,7 +446,12 @@ aside {
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
-    font-size: 20px; } }
+    font-size: 20px; }
+  .cont-productos {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    margin-left: 0;
+    margin-right: 0; } }
 
 /*========================================================*/
 /*========================================================*/
@@ -383,7 +488,7 @@ aside {
     margin-right: 0;
     background-color: white;
     color: #b69696;
-    font-size: 30px; }
+    font-size: 24px; }
   label {
     margin-top: 1%;
     margin-bottom: 0;
